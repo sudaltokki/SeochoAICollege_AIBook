@@ -1,0 +1,171 @@
+.keyword {
+    /* background-color: lemonchiffon; */
+    background: url('./assets/keyword/bg_keyword.png') no-repeat;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* h3 {
+    height: 7vh;
+    padding-top: 20px;
+    margin: 0;
+} */
+
+.button-container {
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    /* flex-direction: row; 버튼을 가로로 나열 / 글자버튼일때 */
+    flex-direction: column;
+    justify-content: center; /* 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+}
+
+/* @keyframes ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
+
+ .button-container button {
+    margin: 0 20px;
+    border-radius: 50%;
+    padding: 20px 25px;
+    cursor: pointer;
+    font-size: 20px;
+
+    position: relative;
+    border: none;
+    min-width: 200px;
+    min-height: 50px;
+    background: linear-gradient(
+        90deg,
+        rgba(129, 230, 217, 1) 0%,
+        rgba(79, 209, 197, 1) 100%
+    );
+    border-radius: 1000px;
+    color: darkslategray;
+    box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+    font-weight: 700;
+    transition: 0.3s;
+} 
+
+.button-container button:hover {
+	transform: scale(1.2);
+}
+
+.button-container button:hover::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 6px solid #00ffcb;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+} */
+
+.img_button_boy:hover,
+.img_button_girl:hover,
+.img_button_cat:hover,
+.img_button_frog:hover,
+.img_button_princess:hover,
+.img_button_superman:hover {
+    transform: scale(1.2);
+}
+
+/* .button-container input:hover::after {
+    content: "";
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    border: 6px solid red;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+} */
+
+
+
+.img_button_boy {
+    background: url('./assets/keyword/boy.png') no-repeat;
+    background-size: 100% 100%;
+    
+    width: 250px;
+    height: 230px;
+    border: none;
+    cursor: pointer;
+}
+
+.img_button_cat {
+    background: url('./assets/keyword/cat.png') no-repeat;
+    background-size: 100% 100%;
+    
+    width: 250px;
+    height: 230px;
+    border: none;
+    cursor: pointer;
+}
+.img_button_superman {
+    background: url('./assets/keyword/superman.png') no-repeat;
+    background-size: 100% 100%;
+    
+    width: 250px;
+    height: 230px;
+    border: none;
+    cursor: pointer;
+}
+.img_button_girl {
+    background: url('./assets/keyword/girl.png') no-repeat;
+    background-size: 100% 100%;
+    
+    width: 250px;
+    height: 230px;
+    border: none;
+    cursor: pointer;
+}
+.img_button_frog {
+    background: url('./assets/keyword/frog.png') no-repeat;
+    background-size: 100% 100%;
+    
+    width: 250px;
+    height: 230px;
+    border: none;
+    cursor: pointer;
+}
+.img_button_princess {
+    background: url('./assets/keyword/princess.png') no-repeat;
+    background-size: 100% 100%;
+    
+    width: 250px;
+    height: 230px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-collection1,
+.button-collection2 {
+    display: flex;
+    gap: 100px;
+    margin: 20px;
+    position: relative;
+    top: 120px;
+}

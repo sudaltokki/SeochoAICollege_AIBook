@@ -1,0 +1,100 @@
+.result {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+}
+
+.img_button_main {
+    background-color: transparent; /* 버튼의 배경을 투명으로 설정합니다 */
+    border: none; /* 테두리 제거 */
+    outline: none; /* 클릭 포커스 스타일 제거 */
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+
+    position: absolute;
+    top:0px;
+    right:0px;
+}
+
+.result_title {
+    width: 100vw;
+    height: 10vh;    
+    
+    font-family: "210flowerblossomB";
+    font-size: 50px;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.result_title p {
+    /* background: url("./assets/green2.png") center center;
+    background-size: 100% 100%; */
+    height: 10vh;
+    margin-bottom: 30px;
+    color: #582C00;
+    text-shadow: 5px 5px 1px #ffffff;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;    
+}
+
+.center_image {
+    width: 450px;
+    height: 500px;
+    margin: 30px auto 0px auto;
+    border-radius: 5%;
+}
+
+.prevarrow {
+    cursor: pointer;
+    position: absolute;
+    top: 300px;
+    z-index: 1;
+}
+
+.nextarrow {
+    cursor: pointer;
+    position: absolute;
+    top: 300px;
+    z-index: 1;
+}
+
+
+@media screen and (min-width: 600px) {
+    .slider_image img {
+        width: 600px;
+        height: 500px;
+        border-radius: 5%;
+    }
+    .prevarrow {
+        left: 10px;
+    }
+    .nextarrow {
+        right: 10px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .slider_image img {
+        width: 900px;
+        height: 550px;
+        border-radius: 5%;
+    }
+    .prevarrow {
+        left: 80px;
+    }
+    .nextarrow {
+        right: 80px;
+    }
+}
+
+.slick-dots li button:before {
+	font-size: 15px !important;
+}

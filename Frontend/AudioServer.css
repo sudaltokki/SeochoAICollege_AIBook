@@ -1,0 +1,36 @@
+.full_screen {
+    width: 100vw;
+    height: 100vh;
+}
+
+.loading_screen {
+    background: url('./assets/bg_result.png') no-repeat;
+    background-size: 100% 100%;
+    
+}
+
+.result_screen {
+    background: url('./assets/bg_result.png') no-repeat;
+    background-size: 100% 100%;
+
+    display: flex; /* 이미지가 담겨있는 캐로셀은 flex로 설정하면 안됨! */ 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.audio {
+    /* background-color: skyblue; */
+
+    width: 100vw;
+    height: 100vh;
+
+    background: url('./assets/audio_img/bg_audio2.png') no-repeat;
+    background-size: 100% 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

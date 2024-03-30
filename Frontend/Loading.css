@@ -1,0 +1,88 @@
+.loading {
+    width: 100vw;
+    height: 100vh;
+}
+
+.loading_text {
+    width: 100vw;
+    height: 10vh;
+
+    font-family: "210flowerblossomB";
+    font-size: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #582C00;
+    text-shadow: 5px 5px 1px #ffffff;
+}
+
+/* 앵글텍스트 효과 */
+.loading_text p {
+    display: inline-block;
+    animation: animate 1.5s infinite;
+}
+
+@keyframes animate {
+    0% {
+      transform: rotateZ(-20deg);
+    }
+    50% {
+      transform: rotateZ(20deg);
+    }
+    100% {
+      transform: rotateZ(-20deg);
+    }
+}
+
+.loading_title {
+    width: 100vw;
+    height: 10vh;
+    
+    font-family: "210flowerblossomB";
+    font-size: 30px;
+    color: #582C00;
+    text-shadow: 5px 5px 1px #ffffff;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading_title p {
+    margin-left: 10px;
+}
+
+.loading_title span {
+    font-size: 30px;
+}
+
+
+.loading_video {
+    width: 100vw;
+    height: 60vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+    border-radius: 5%;
+}
+
+@media screen and (min-width: 600px) {
+    .loading_video video {
+        width: 800px;
+        height: auto;
+        border-radius: 5%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .loading_video video {
+        width: 900px;
+        height: auto;
+        border-radius: 5%;
+    }
+}

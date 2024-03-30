@@ -1,0 +1,41 @@
+/* .bgimage {
+    width: 100vw;
+    height: 100vh;
+} */
+
+.login_signup {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    position: absolute;
+    /* top: 420px; */
+}
+
+.img_button_login {
+    background: url('./assets/main/login_button.png') no-repeat;
+    background-size: 100% 100%;
+    width: 400px;
+    height: 200px;
+    cursor: pointer;
+    border: none;
+
+}
+
+.img_button_keyword {
+    background-color: transparent; /* 버튼의 배경을 투명으로 설정합니다 */
+    border: none; /* 테두리 제거 */
+    outline: none; /* 클릭 포커스 스타일 제거 */
+    width: 34vw;
+    height: 100vh;
+    cursor: pointer;
+}
+
+.img_button_signup {
+    background: url('./assets/main/sign_button.png') no-repeat;
+    background-size: 100% 100%;
+    width: 400px; 
+    height: 200px;
+    cursor: pointer;
+    border: none;
+}
