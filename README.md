@@ -1,16 +1,30 @@
-# SeochoAICollege_AIBook
+# AI 동화책 생성 서비스 아이북 AI-Book
 서초AI칼리지 - 동화책 생성 AI서비스 아이북
+![아이북]()
 
-## 📖 내용
+## 📖 프로젝트 소개
 
-- 사용자 설정에 따라 **개인화된 동화책**을 **생성**하는 인공지능 기반의 웹 서비스이다.
-- 사용자의 **음성 인식(fine-tuned Whisper)**을 통해 주제를 설정, **GPT-4**를 통해 이야기를 생성, **Stable diffusion**을 통하여 이미지를 생성하여 최종적으로는 동화책을 제작하는 것을 목표로 한다.
-- 서비스의 대상이 유아인 것 만큼, 발음이 부정확한 유아의 음성에 대한 인식률을 높이기 위하여 음성인식 모델인 Whisper를 fine-tuning한다.
+- 사용자 설정에 따라 **개인화된 동화책**을 생성하는 인공지능 기반의 웹 서비스입니다.
+- 사용자는 직접 동화책의 주인공과 주제를 선택할 수 있습니다.
+- 서비스의 주 사용자가 소아 혹은 유아일 것을 고려하여 사용자가 말하는 주제를 음성인식으로 받아오도록 기획하였다. 그리고 정확한 음성인식을 위해 Speech to Text 모델인 **OpenAI의 Whisper**을 **fine-tuning**하여 소아/유아 음성에 더 적합한 모델을 개발하였습니다.
+- **GPT-4**와 **Stable diffusion**을 사용해 동화책의 제목, 내용, 그림을 생성하였습니다.
 
 ![아이북 포스터]()
 
-## 🙋‍♂️ 역할
+## 🙋‍♂️ 팀원 구성
+|박주은|박지원|임동희|정하성|
+| :--------: | :--------: | :--------: | :--------: | 
+|<img src="" width="120" height="120"/>|<img src="" width="120" height="120"/>|<img src="" width="120" height="120"/>|<img src="" width="120" height="120"/>|
+|[@](https://github.com/)|[@sudaltokki](https://github.com/sudaltokki)|[@](https://github.com/)|[@](https://github.com/)|
+|Frontend|AI|AI|AI|
 
+## 개발 환경
+- Frontend: React
+- Backend: Spring
+- AI: 
+- 협업 툴: Notion, Slack
+
+## Whisper Fine-tuning
 - Whisper모델을 fine-tuning할 때 사용할 음성 데이터를 전처리한다
     
     → `병렬처리를 통해 기존 소요시간의 1/10 이상 감소`
