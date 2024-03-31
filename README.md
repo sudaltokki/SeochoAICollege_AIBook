@@ -1,30 +1,53 @@
-# AI 동화책 생성 서비스 아이북 AI-Book
-서초AI칼리지 - 동화책 생성 AI서비스 아이북
-![아이북]()
+<div align="center">
+<h1> [유아용 동화책 생성 서비스] 아이북 AI-Book </h1>
 
-## 📖 프로젝트 소개
+<img src="https://github.com/sudaltokki/SeochoAICollege_AIBook/assets/86659995/9693e807-f036-46aa-bcaa-8893ee33689b" width="570" height="717"/>
+</div>
+
+<br>
+
+<div align="center">
+    <h2> 📖 프로젝트 소개 </h2>
+</div>
 
 - 사용자 설정에 따라 **개인화된 동화책**을 생성하는 인공지능 기반의 웹 서비스입니다.
 - 사용자는 직접 동화책의 주인공과 주제를 선택할 수 있습니다.
 - 서비스의 주 사용자가 소아 혹은 유아일 것을 고려하여 사용자가 말하는 주제를 음성인식으로 받아오도록 기획하였다. 그리고 정확한 음성인식을 위해 Speech to Text 모델인 **OpenAI의 Whisper**을 **fine-tuning**하여 소아/유아 음성에 더 적합한 모델을 개발하였습니다.
 - **GPT-4**와 **Stable diffusion**을 사용해 동화책의 제목, 내용, 그림을 생성하였습니다.
 
-![아이북 포스터]()
+<br>
 
-## 🙋‍♂️ 팀원 구성
-|박주은|박지원|임동희|정하성|
+<div align="center">   
+    <h2> 🙋‍♂️ 팀원 구성 </h2>
+<div>
+    
+|박지원|정하성|임동희|박주은|
 | :--------: | :--------: | :--------: | :--------: | 
-|<img src="" width="120" height="120"/>|<img src="" width="120" height="120"/>|<img src="" width="120" height="120"/>|<img src="" width="120" height="120"/>|
-|[@](https://github.com/)|[@sudaltokki](https://github.com/sudaltokki)|[@](https://github.com/)|[@](https://github.com/)|
-|Frontend|AI|AI|AI|
+|<img src="https://github.com/sudaltokki.png" width="120" height="120"/>|<img src="https://github.com/HaseongJung.png" width="120" height="120"/>|<img src="https://github.com/star1sh.png" width="120" height="120"/>|<img src="" width="120" height="120"/>|
+|[@sudaltokki](https://github.com/sudaltokki)|[@HaseongJung](https://github.com/)|[@star1sh](https://github.com/star1sh)|[@](https://github.com/)|
+|Team Leader, AI|AI|AI|Frontend|
 
-## 개발 환경
+</div>
+
+</div>
+
+<br>
+
+<div align="center">  
+    <h2> 개발 환경 </h2>
+</div>
+    
 - Frontend: React
-- Backend: Spring
-- AI: 
+- Backend: MySQL, Spring, AWS S3
+- AI: OpenAI API(GPT-4), huggingface(Whisper, Stable Diffusion)
 - 협업 툴: Notion, Slack
+  
+<br>
 
-## Whisper Fine-tuning
+<div align="center">  
+    <h2> Whisper Fine-tuning </h2>
+</div>
+
 - Whisper모델을 fine-tuning할 때 사용할 음성 데이터를 전처리한다
     
     → `병렬처리를 통해 기존 소요시간의 1/10 이상 감소`
@@ -41,10 +64,11 @@
     
     `기존 이미지 1장 당 25초 → 12초`
     
+<br>
 
----
-
-## Dataset
+<div align="center">  
+    <h2> Dataset </h2>
+</div>
 
 AI Hub에서 제공하는 ‘명령어 음성(소아, 유아)’ 데이터를 사용한다.
 
@@ -54,7 +78,9 @@ AI Hub에서 제공하는 ‘명령어 음성(소아, 유아)’ 데이터를 �
 
 <br>
 
-## Preprocessing
+<div align="center">  
+    <h2> Preprocessing </h2>
+</div>
 
 1. 데이터의 전사정보(json)에서 필요없는 괄호, 특수문자 및 노이즈 표기 등을 제거한다.
 2. 데이터의 오디오 파일(wave)을 `48kHz→16kHz` resampling 및 Z-socre정규화를 진행한다.
@@ -67,7 +93,9 @@ AI Hub에서 제공하는 ‘명령어 음성(소아, 유아)’ 데이터를 �
 
 <br>
 
-## Whisper fine-tuning
+<div align="center">  
+    <h2> Whisper fine-tuning </h2>
+</div>
 
 ![whisper성능](https://github.com/HaseongJung/AIBook/assets/107913513/2b744cd2-7dd5-4aef-841a-194bf289a827)
 
@@ -112,7 +140,11 @@ fine-tuned Whisper-small (child-50k, linear, adamW)
 
 최종적으로 augmentaion을 진행하지 않고, linear lr scheduler, 10k의 데이터셋을 사용하여 fine-tuning하는 것이 성능이 가장 좋은 것으로 판단하였다.
 
-### LoRA fine-tuning
+<br>
+
+<div align="center">  
+    <h2> LoRA fine-tuning </h2>
+</div>
 
 tiny/small 모델을 비교하였을 때, 모델 사이즈에 따라 성능 차이가 큰 것을 확인 후, 제약 된 환경에서 Whisper-large모델을 fine-tuning할 수 있는 방법을 모색 중 `LoRA fine-tuning`기법을 발견하였다.
 
@@ -126,7 +158,9 @@ fine-tuned Whisper large-v2 (Best model)
 
 <br>
 
-## Stable Diffusioin
+<div align="center">  
+    <h2> Stable Diffusion </h2>
+</div>
 
 ![Stable Diffusion - user preference chart](https://github.com/HaseongJung/AIBook/assets/107913513/d96faf51-2dd8-4989-8803-94fd781d93fa)
 
@@ -142,7 +176,34 @@ Stable Diffusion - user preference chart
 
 <br>
 
-## 🎯 결과 및 성과
+<div align="center">  
+    <h2> 🎯 결과 및 성과 </h2>
+</div>
 
-- 서초 AI칼리지 프로젝트 과정 우수팀 선정
-- 「생성형 AI기반의 동화책 제작 서비스 설계 및 구현」, ****HCIK2024 ****
+- [2023 서초 AI칼리지 프로젝트 캡스톤 발표](https://www.newsis.com/view/id=NISI20231027_0020107088) 
+- 2023 서초 AI칼리지 프로젝트 과정 우수팀 선정
+- **HCI KOREA 2024 학술대회 논문 게재 및 포스터 발표**
+    - 생성형 AI 기반의 동화책 제작 서비스 설계 및 구현. 한국HCI학회 학술대회. 한국HCI학회. pp. 845-850. 2024.
+![아이북 포스터 최종본](https://github.com/sudaltokki/SeochoAICollege_AIBook/assets/86659995/cf71e321-ecd3-4bfc-b3ea-902b7bacc85c)
+
+<br>
+
+<div align="center">  
+    <h2> 동화책 생성 과정 실행방법 </h2>
+    <h3> 직접 실행하기 </h3>
+</div>
+
+- 현재 개발한 웹서비스가 배포되어있지 않으므로 로컬에서 실행할 수 있도록 test.py 코드를 올려두었습니다.
+- cuda를 사용할 수 있는 가상환경에서 실행해주세요.
+- audio file을 사용하는 과정에서 **ffmpeg 코텍 설치**가 필요합니다. [링크](https://doa-oh.tistory.com/170?category=757135)를 참고해서 설치해주세요.
+- SeochoAICollege_AIBook/AI/generate_book.py 부분에 **OpenAI api key**를 넣고 사용해주세요.
+```
+git clone https://github.com/sudaltokki/SeochoAICollege_AIBook.git
+cd SeochoAICollege_AIBook/AI
+pip install -r requirements.txt
+python test.py
+```
+
+<div align="center">  
+    <h3> colab으로 간단하게 실행하기 </h3>
+</div>
