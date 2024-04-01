@@ -1,15 +1,25 @@
 <div align="center">
-<h1> [유아용 동화책 생성 서비스] 아이북 AI-Book </h1>
+<h1> [인공지능이 만드는 아이들의 그림 동화책] 아이북 AI-Book </h1>
 
-<img src="https://github.com/sudaltokki/SeochoAICollege_AIBook/assets/86659995/9693e807-f036-46aa-bcaa-8893ee33689b" width="570" height="717"/>
+<img src="https://github.com/sudaltokki/SeochoAICollege_AIBook/assets/86659995/9693e807-f036-46aa-bcaa-8893ee33689b" width="570" />
 </div>
 
 <br>
 
 <div align="center">
-    <h2> 📖 프로젝트 소개 </h2>
+    <h2> 📖 Overview </h2>
 </div>
 
+아이들은 그림 동화책을 통해 '즐거움'과 동시에 '세상을 이해하는 경험'을 얻는다. 동화 속에서 마주치는 다양한 상황 속에서 아이들은 새로운 어휘를 익히고 다른 사람의 감정과 관점을 이해하게 된다. '아이북'은 사용자가 원하는 주제에 AI의 지능과 창의력을 더해 다양한 스토리와 풍부한 표현력을 가진 그림을 보여준다. 아이들의 성장 과정에서 디지털 툴을 활용해 창의력과 언어 학습 능력을 향상시킬 수 있도록 하는 도구를 만들고자 한다.
+
+- Problem Definition
+  
+- Main features
+    - 소아/유아 음성인식에 특화된 STT(Speech to Text) Model 개발
+    - Prompt Engineering
+        - 사용자가 직접 지정한 주인공과 주제를 기반으로 개인화된 동화책 생성
+        - 소아/유아에게 적합한 동화책 내용과 이미지 생성
+  
 - 사용자 설정에 따라 **개인화된 동화책**을 생성하는 인공지능 기반의 웹 서비스입니다.
 - 사용자는 직접 동화책의 주인공과 주제를 선택할 수 있습니다.
 - 서비스의 주 사용자가 소아 혹은 유아일 것을 고려하여 사용자가 말하는 주제를 음성인식으로 받아오도록 기획하였다. 그리고 정확한 음성인식을 위해 Speech to Text 모델인 **OpenAI의 Whisper**을 **fine-tuning**하여 소아/유아 음성에 더 적합한 모델을 개발하였습니다.
@@ -18,7 +28,7 @@
 <br>
 
 <div align="center">   
-    <h2> 🙋‍♂️ 팀원 구성 </h2>
+    <h2> 🙋‍♂️ Team </h2>
 <div>
     
 |박지원|정하성|임동희|박주은|
@@ -34,13 +44,24 @@
 <br>
 
 <div align="center">  
-    <h2> 개발 환경 </h2>
+    <h2> 🔧 Stacks </h2>
 </div>
-    
-- Frontend: React
-- Backend: MySQL, Spring, AWS S3
-- AI: OpenAI API(GPT-4), huggingface(Whisper, Stable Diffusion)
-- 협업 툴: Notion, Slack
+
+### AI
+![Pytorch](https://img.shields.io/badge/Pytorch-EE4C2C?style=for-the-badge&logo=Pytorch&logoColor=white) 
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=OpenAI&logoColor=white) 
+![HuggingFace](https://img.shields.io/badge/HuggingFace-F7CB1D?style=for-the-badge&logo=HuggingFace&logoColor=white) 
+
+### Frontend/Backend
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=ffffff)
+![Spring](http://img.shields.io/badge/-Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=ffffff)
+
+### Communication
+![Slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=Slack&logoColor=white)
+![Notion](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white)
+![GoogleMeet](https://img.shields.io/badge/GoogleMeet-00897B?style=for-the-badge&logo=Google%20Meet&logoColor=white)
   
 <br>
 
@@ -159,10 +180,21 @@ fine-tuned Whisper large-v2 (Best model)
 <br>
 
 <div align="center">  
-    <h2> Stable Diffusion </h2>
+    <h2> 동화책 생성 </h2>
 </div>
 
-![Stable Diffusion - user preference chart](https://github.com/HaseongJung/AIBook/assets/107913513/d96faf51-2dd8-4989-8803-94fd781d93fa)
+<div align="center">  
+    <h3> Flowchart </h3>
+    <img width="600" src="https://github.com/sudaltokki/SeochoAICollege_AIBook/assets/86659995/df644c2c-77cb-481c-897e-4f2b341666cf"/ >
+</div>
+</div>
+
+<br>
+
+<div align="center">  
+    <h2> Stable Diffusion </h2>
+</div>
+<img width="600" src="https://github.com/HaseongJung/AIBook/assets/107913513/d96faf51-2dd8-4989-8803-94fd781d93fa"/ >
 
 Stable Diffusion - user preference chart
 
@@ -177,26 +209,48 @@ Stable Diffusion - user preference chart
 <br>
 
 <div align="center">  
-    <h2> 🎯 결과 및 성과 </h2>
+<h2> 📺 UI </h2>
+    
+<div>
+        
+| 홈 화면 | 주인공 선택 |
+| :--------: | :--------: | 
+|  <img width="329" src="https://github.com/sudaltokki/SeochoAICollege_AIBook/assets/86659995/e47bfcb1-83ee-46d5-bd7b-8945d1bc48eb"/> |  <img width="329" src="https://github.com/sudaltokki/SeochoAICollege_AIBook/assets/86659995/21a2fca2-39ac-48a9-9447-47b661dfdbb3"/>| 
+
+| 주제 설정 (음성인식) | 생성중 | 생성 완료 |
+| :--------: | :--------: | :--------: |
+| <img width="329" src="https://github.com/sudaltokki/SeochoAICollege_AIBook/assets/86659995/03b52fb8-a907-4614-a789-a06f56e0bdd9"/>   |  <img width="329" src="https://github.com/sudaltokki/SeochoAICollege_AIBook/assets/86659995/760c2936-80d4-45de-b9f4-1590728fdaf2"/>     |  <img width="329" src="https://github.com/sudaltokki/SeochoAICollege_AIBook/assets/86659995/0f66327d-eb74-40b8-906c-277617408964"/>     |
+
+</div>
+    
+</div>
+
+<br>
+
+<div align="center">  
+    <h2> 🎯 Achievements </h2>
 </div>
 
 - [2023 서초 AI칼리지 프로젝트 캡스톤 발표](https://www.newsis.com/view/id=NISI20231027_0020107088) 
 - 2023 서초 AI칼리지 프로젝트 과정 우수팀 선정
 - **HCI KOREA 2024 학술대회 논문 게재 및 포스터 발표**
-    - 생성형 AI 기반의 동화책 제작 서비스 설계 및 구현. 한국HCI학회 학술대회. 한국HCI학회. pp. 845-850. 2024.
-![아이북 포스터 최종본](https://github.com/sudaltokki/SeochoAICollege_AIBook/assets/86659995/cf71e321-ecd3-4bfc-b3ea-902b7bacc85c)
+    - [생성형 AI 기반의 동화책 제작 서비스 설계 및 구현. 한국HCI학회 학술대회. 한국HCI학회. pp. 845-850. 2024.](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11714752)
+
+<div align="center">  
+    <img width="570" src="https://github.com/sudaltokki/SeochoAICollege_AIBook/assets/86659995/cf71e321-ecd3-4bfc-b3ea-902b7bacc85c"/>
+</div>
 
 <br>
 
 <div align="center">  
-    <h2> 동화책 생성 과정 실행방법 </h2>
-    <h3> 직접 실행하기 </h3>
+    <h2> 🎞️ Demo </h2>
 </div>
 
 - 현재 개발한 웹서비스가 배포되어있지 않으므로 로컬에서 실행할 수 있도록 test.py 코드를 올려두었습니다.
 - cuda를 사용할 수 있는 가상환경에서 실행해주세요.
 - audio file을 사용하는 과정에서 **ffmpeg 코텍 설치**가 필요합니다. [링크](https://doa-oh.tistory.com/170?category=757135)를 참고해서 설치해주세요.
-- SeochoAICollege_AIBook/AI/generate_book.py 부분에 **OpenAI api key**를 넣고 사용해주세요.
+- SeochoAICollege_AIBook/AI/generate_book.py 에서 **OpenAI api key**를 넣고 사용해주세요.
+
 ```
 git clone https://github.com/sudaltokki/SeochoAICollege_AIBook.git
 cd SeochoAICollege_AIBook/AI
