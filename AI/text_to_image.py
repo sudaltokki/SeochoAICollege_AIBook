@@ -25,7 +25,7 @@ def generate_image(text, title, idx):
     print(text)
 
     # run both experts
-    init_image = sd_base(prompt=text, generator=generator, num_inference_steps=50).images[0]
+    init_image = sd_base(prompt=text, generator=generator, num_inference_steps=20).images[0]
     refined_image = sd_refiner(prompt=text, generator=generator, image=init_image, num_inference_steps=20).images[0]
 
     # save image
