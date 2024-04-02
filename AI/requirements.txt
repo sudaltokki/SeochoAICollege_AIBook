@@ -3,7 +3,6 @@ librosa
 transformers
 diffusers
 openai
-random
 peft
 invisible_watermark 
 accelerate 
