@@ -198,7 +198,8 @@ Reference Code: https://colab.research.google.com/drive/1DOkD_5OUjFa0r5Ik3SgywJL
     <h2> 🎯 Achievements </h2>
 </div>
 
-- [2023 서초 AI칼리지 프로젝트 캡스톤 발표](https://www.newsis.com/view/id=NISI20231027_0020107088) 
+- [2023 서초 AI칼리지 프로젝트 캡스톤 발표](https://view.asiae.co.kr/article/2023102721395443490)
+- <img width="500" src="https://github.com/user-attachments/assets/ad73c307-6a27-4793-bda8-6e9c2383cc53"/>  
 - 2023 서초 AI칼리지 프로젝트 과정 우수팀 선정
 - **HCI KOREA 2024 학술대회 논문 게재 및 포스터 발표**
     - [생성형 AI 기반의 동화책 제작 서비스 설계 및 구현. 한국HCI학회 학술대회. 한국HCI학회. pp. 845-850. 2024.](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11714752)
