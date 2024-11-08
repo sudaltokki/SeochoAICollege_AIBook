@@ -1,5 +1,5 @@
 <div align="center">
-<h1> [인공지능이 만드는 아이들의 그림 동화책] 아이북 AI-Book </h1>
+<h1> [아이북 AI-Book] 인공지능이 만드는 아이들의 그림 동화책 </h1>
 
 <img src="https://github.com/sudaltokki/SeochoAICollege_AIBook/assets/86659995/9693e807-f036-46aa-bcaa-8893ee33689b" width="570" />
 </div>
